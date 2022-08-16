@@ -1,7 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 import { IoIosPerson } from 'react-icons/io';
 
-const Layout = () => (
+const NavBar = () => (
   <>
     <header className="bg-white mb-4">
       <nav className="container d-flex align-items-center justify-content-between p-0">
@@ -21,4 +21,4 @@ const Layout = () => (
   </>
 );
 
-export default Layout;
+export default NavBar;
