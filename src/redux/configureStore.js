@@ -4,7 +4,7 @@ import booksReducer from './books/books';
 import checkStatusReducer from './categories/categories';
 
 const rootReducer = combineReducers({
-  books: booksReducer,
+  book: booksReducer,
   status: checkStatusReducer,
 });
 
