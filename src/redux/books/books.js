@@ -1,24 +1,40 @@
 const ADD_BOOK = '/bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: '1',
+    title: 'The Adventure Of Sherlocks Holmes',
+    author: 'Sir Author Conan Doyle',
+  },
+  {
+    id: '2',
+    title: 'Robinson Crusoe',
+    author: 'Daniel Defoe',
+  },
+  {
+    id: '3',
+    title: 'Around The World In 80 Days',
+    author: 'Jules Verne',
+  },
+];
 
-export const addBookAction = (payload) => ({
+export const addBookAction = (book) => ({
   type: ADD_BOOK,
-  payload,
+  book,
 });
 
-export const removeBookAction = (payload) => ({
+export const removeBookAction = (book) => ({
   type: REMOVE_BOOK,
-  payload,
+  book,
 });
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.payload];
+      return [...state, action.book];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+      return state.filter((book) => book.id !== action.book.id);
     default:
       return state;
   }
