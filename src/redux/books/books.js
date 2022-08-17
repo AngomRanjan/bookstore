@@ -32,12 +32,26 @@ export const fetchBookApiAction = () => async (dispatch) => {
   dispatch(fetchBook(booksFetched));
 };
 
+export const addBookApiAction = (book) => async (dispatch) => {
+  const { id, title, author } = book;
+  const newBook = {
+    item_id: id,
+    title,
+    author,
+    category: 'Fiction',
+  };
+  await axios.post(BaseUrl, newBook);
+  dispatch(addBookAction(book));
+};
+
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.book.id);
+    case FETCH_BOOK:
+      return action.book;
     default:
       return state;
   }
