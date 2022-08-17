@@ -46,7 +46,7 @@ const Book = ({ book }) => {
               <div className="circle-bar" />
             </div>
             <div className="m-0 ps-3">
-              <p className="p-0 m-0 fs-4">64%</p>
+              <p className="p-0 m-0 fs-4">0%</p>
               <p className="p-0 m-0 text-1">completed</p>
             </div>
           </div>
