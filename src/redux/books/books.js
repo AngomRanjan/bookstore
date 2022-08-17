@@ -44,6 +44,11 @@ export const addBookApiAction = (book) => async (dispatch) => {
   dispatch(addBookAction(book));
 };
 
+export const removeBookApiAction = (id) => async (dispatch) => {
+  await axios.delete(`${BaseUrl}/${id}`);
+  dispatch(removeBookAction({ id }));
+};
+
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
