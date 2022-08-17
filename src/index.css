@@ -55,7 +55,7 @@ a:-webkit-any-link {
   text-decoration: none;
   color: #9c9c9c;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 a:focus {
@@ -79,7 +79,7 @@ a:focus {
 }
 
 .text-3 {
-  color: #b7d0e6;
+  color: #59a1e0;
 }
 
 .text-2 {
