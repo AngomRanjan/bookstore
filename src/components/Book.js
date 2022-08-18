@@ -20,7 +20,7 @@ const Book = ({ book }) => {
       <div className="book row container mx-auto mb-4 px-4 py-3 bg-white d-flex align-items-between justify-content-between">
         <div className="col-5 m-0 p-0">
           <div className="mx-0 mb-2 p-0">
-            <p className="m-0 px-0 pt-3 pb-1 text-1 font-style-1">{category}</p>
+            <p className="m-0 px-0 pt-3 pb-1 text-1 font-style-1 category">{category}</p>
             <h4 className="m-0 px-0 py-1 text-2 font-style-1">{title}</h4>
             <p className="m-0 p-0 py-1 text-3 font-style-1">{author}</p>
           </div>
