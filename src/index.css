@@ -59,6 +59,13 @@ a:-webkit-any-link {
   font-size: 0.813rem;
   font-weight: normal;
   letter-spacing: 1.9px;
+  animation: 2s;
+}
+
+a:hover {
+  color: #4c4a53;
+  font-weight: bold;
+  transition: all;
 }
 
 a:focus {
