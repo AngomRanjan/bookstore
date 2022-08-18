@@ -15,10 +15,10 @@ const Categories = () => {
   return (
     <>
       <div className="container p-0">
-        <button type="button" className="btn" onClick={updateCategories}>
+        <button type="button" className="btn font-style-1" onClick={updateCategories}>
           Check Status
         </button>
-        <h4 className="pt-5 text-5">{status}</h4>
+        <h4 className="pt-5 text-5 font-style-1">{status}</h4>
       </div>
     </>
   );
