@@ -17,7 +17,7 @@ const Books = () => {
       {bookList.length ? (
         bookList.map((book) => <Book book={book} key={book.id} />)
       ) : (
-        <h3 className="container mx-auto mb-3 px-3 py-3 bg-white text-5">
+        <h3 className="container mx-auto mb-3 px-3 py-3 bg-white text-5 font-style-1">
           No books to show!
         </h3>
       )}

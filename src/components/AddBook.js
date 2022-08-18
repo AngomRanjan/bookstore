@@ -12,6 +12,7 @@ const AddBook = () => {
     id: v4(),
     title,
     author,
+    category: 'Fiction',
   };
 
   const addBookStore = (e) => {
@@ -23,9 +24,9 @@ const AddBook = () => {
 
   return (
     <>
-      <div className="container border-top my-0 p-0 ">
+      <div className="container border-top mx-auto mt-5 px-0 py-4">
         <form className="form-box m-0 p-0">
-          <p className="label">ADD NEW BOOK</p>
+          <p className="label font-style-1">ADD NEW BOOK</p>
           <div>
             <input
               type="text"
@@ -45,7 +46,7 @@ const AddBook = () => {
             />
             <input
               onClick={addBookStore}
-              className="btn1"
+              className="btn1 font-style-1"
               type="submit"
               value="ADD BOOK"
             />
