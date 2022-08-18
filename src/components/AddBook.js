@@ -7,12 +7,13 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
 
   const newBook = {
     id: v4(),
     title,
     author,
-    category: 'Fiction',
+    category,
   };
 
   const addBookStore = (e) => {
@@ -20,6 +21,7 @@ const AddBook = () => {
     dispatch(addBookApiAction(newBook));
     setTitle('');
     setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -44,6 +46,21 @@ const AddBook = () => {
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
             />
+            <select
+              id="sel-cat"
+              name="category"
+              placeholder="Cat"
+              required
+              className="sel-cat"
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option option value="default" selected disabled hidden> Category </option>
+              <option value="Science Fiction"> Science Fiction </option>
+              <option value="Classics"> Classics </option>
+              <option value="Detective Fiction"> Detective Fiction </option>
+              <option value="Autobiography"> Autobiography </option>
+              <option value="Programming"> Programming </option>
+            </select>
             <input
               onClick={addBookStore}
               className="btn1 font-style-1"
