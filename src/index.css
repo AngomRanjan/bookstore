@@ -51,13 +51,6 @@ ul {
   text-decoration: none;
 }
 
-.font-style-1,
-a:-webkit-any-link {
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-}
-
 a:-webkit-any-link {
   text-decoration: none;
   color: #9c9c9c;
@@ -251,4 +244,13 @@ input[type='reset'] {
 .btn1 {
   border: none;
   background-color: white;
+}
+
+.category { color: #9c9c9c; }
+
+.font-style-1,
+a:-webkit-any-link {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
