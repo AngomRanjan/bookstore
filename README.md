@@ -16,7 +16,6 @@ Remove a selected book.
 - React
 
 ## Live Demo
-[source code](https://github.com/AngomRanjan/bookstore)
 
 [Live Demo Link](https://bookstore-angom.netlify.app)
 
