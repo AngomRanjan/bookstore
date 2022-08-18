@@ -26,19 +26,29 @@ const fetchBook = (book) => ({
 export const fetchBookApiAction = () => async (dispatch) => {
   const books = await axios.get(BaseUrl);
   const booksFetched = Object.entries(books.data).map((item) => {
-    const { title, author } = item[1][0];
-    return { id: item[0], title, author };
+    const { title, author, category } = item[1][0];
+    return {
+      id: item[0],
+      title,
+      author,
+      category,
+    };
   });
   dispatch(fetchBook(booksFetched));
 };
 
 export const addBookApiAction = (book) => async (dispatch) => {
-  const { id, title, author } = book;
+  const {
+    id,
+    title,
+    author,
+    category,
+  } = book;
   const newBook = {
     item_id: id,
     title,
     author,
-    category: 'Fiction',
+    category,
   };
   await axios.post(BaseUrl, newBook);
   dispatch(addBookAction(book));
